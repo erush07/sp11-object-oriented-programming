@@ -28,7 +28,9 @@ class Product:
         self.name = name
         self.price = price
 
-items = [Product("Mouse", 20), Product("Keyboard", 30),
+items_list = [Product("Mouse", 20), Product("Keyboard", 30),
          Product("Monitor", 150)]
-total = sum(item.price for item in items)
+total = 0
+for product_obj in items_list:
+   total += product_obj.price
 print(f"Total inventory value: ${total}")
