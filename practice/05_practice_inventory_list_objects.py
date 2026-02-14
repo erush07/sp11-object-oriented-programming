@@ -19,3 +19,22 @@ INSTRUCTIONS:
 3. Loop through the list to calculate and print the total value of the
    inventory.
 '''
+
+class Product:
+    def __init__(self, name, price):
+       self.name = name
+       self.price = price
+
+
+pro1 = Product("Banana", 3)
+pro2 = Product("Apple", 5)
+pro3 = Product("Toast", 4)
+
+product_list = [pro1, pro2, pro3]
+
+total = 0
+
+for x in product_list:
+    total += x.price
+
+print(total)

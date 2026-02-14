@@ -19,3 +19,23 @@ INSTRUCTIONS:
    where the key is id_num and the value is the Student object.
 3. Prompt for an id, look up the student, and print the student's GPA.
 '''
+
+class Student:
+    def __init__(self, id_num, name, gpa):
+        self.id_num = id_num
+        self.name = name
+        self.gpa = gpa
+
+oStu1 = Student(1001, "Greg", 4.0)
+oStu2 = Student(1002, "Jill", 3.98)
+oStu3 = Student(1003, "Dan", 3.87)
+
+student_dict = {oStu1.id_num: oStu1, oStu2.id_num: oStu2, oStu2.id_num: oStu3}
+
+id_input = int(input("Enter a student's ID number: "))
+if id_input == oStu1.id_num:
+    print(oStu1.gpa)
+elif id_input == oStu2.id_num:
+    print(oStu2.gpa)
+elif id_input == oStu3.id_num:
+    print(oStu3.gpa)

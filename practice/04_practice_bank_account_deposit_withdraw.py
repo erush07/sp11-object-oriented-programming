@@ -22,3 +22,27 @@ INSTRUCTIONS:
 3. Create an account with $100, deposit $50, withdraw $30, then attempt
    to withdraw $150. Print the balance after each action.
 '''
+class BankAccount:
+      def __init__(self):
+            self.balance = 100
+
+      def deposit(self, amount):
+            self.amount = amount
+            self.balance += amount
+      def withdraw(self, amount):
+            self.amount = amount
+            if self.balance - amount > 0:
+                  self.balance -= amount
+            else:
+                  print("Insufficient funds")
+
+acc1 = BankAccount()
+
+acc1.deposit(50)
+print(f"${acc1.balance}")
+
+acc1.withdraw(30)
+print(f"${acc1.balance}")
+
+acc1.withdraw(150)
+print(f"${acc1.balance}")

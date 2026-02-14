@@ -20,3 +20,16 @@ INSTRUCTIONS:
 3. Print each employee's details in the format:
    Name: <name>, Title: <title>, Salary: <salary>
 '''
+
+class Employee:
+    def __init__(self, name, title, salary):
+        self.name = name
+        self.title = title
+        self.salary = salary
+        pass
+    
+emp1 = Employee("Bob Gardner", "Project Manager", 150000)
+emp2 = Employee("Rob Farmer", "Product Manager", 120000)
+
+print(f"Name: {emp1.name}, Title: {emp1.title}, Salary: {emp1.salary}")
+print(f"Name: {emp2.name}, Title: {emp2.title}, Salary: {emp2.salary}")

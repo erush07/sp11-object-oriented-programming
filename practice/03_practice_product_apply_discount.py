@@ -21,3 +21,16 @@ INSTRUCTIONS:
 3. Create one Product priced at $50, apply a 20% discount, and print the
    new price.
 '''
+
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def apply_discount(self, percent):
+        self.price *= (1 - percent/100)
+        return self.price
+
+pro1 = Product("Banana", 50)
+pro1.apply_discount(20)
+print(pro1.price)

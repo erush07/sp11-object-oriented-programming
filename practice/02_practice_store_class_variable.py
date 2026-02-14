@@ -25,8 +25,16 @@ INSTRUCTIONS:
 
 # starter code
 class Employee:
+    company_name = "TechCorp"
     def __init__(self, name, title, salary):
         self.name = name
         self.title = title
         self.salary = salary
 
+emp1 = Employee("Bob Gardner", "Project Manager", 150000)
+print(Employee.company_name)
+print(emp1.company_name)
+
+Employee.company_name = "BizSoft"
+print(Employee.company_name)
+print(emp1.company_name)
